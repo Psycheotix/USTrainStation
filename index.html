@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Stations</title>
+
+    <!-- RESET CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Added link to the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+     <!-- FIREBASE JS LINK -->
+     <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+
+    <!-- Added Moment JS -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Train Schedule</h1>
+                <p class="lead">Check the train table below to see train schedule. Add a train in the form below.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- TRAIN TABLE START-->
+    <div class="container">
+        <section>
+            <div class="card">
+                <h5 class="card-header">Train Schedule</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                    <!-- TABLE START -->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Train</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Miami Central</th>
+                                <td>Fort Lauderdale</td>
+                                <td>55 min</td>
+                                <td>6:15pm</td>
+                                <td>47 min</td>
+                            </tr>
+                            <!-- Apending extra rows for trains below here -->
+                            <!--  -->
+                            <!--  -->
+                        </tbody>
+                    </table>
+                    <!-- TABLE END -->
+                </div>
+            </div>
+        </section>
+        <!-- TRAIN TABLE END -->
+
+        <!-- ADD TRAIN FORM START -->
+
+        <section>
+            <div class="card">
+                <h5 class="card-header">Add Train</h5>
+                <div class="card-body">
+                    <!-- FORM START -->
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationTooltip01">Train Name</label>
+                                <input type="text" class="form-control" id="train-name" placeholder="Train Name"
+                                    value="Train Name" required>
+                                <div class="valid-tooltip">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="validationTooltip02">Destination</label>
+                                <input type="text" class="form-control" id="trainDestination" placeholder="Destination"
+                                    value="Destination" required>
+                                <div class="valid-tooltip">
+                                    Looks good!
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationTooltip03">First Train Time. (military time)</label>
+                                <input type="text" class="form-control" id="trainTime" placeholder="First Train Time"
+                                    required>
+                                <div class="invalid-tooltip">
+                                    First Train Time. (military time)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="validationTooltip04">Frequency. (min)</label>
+                                <input type="text" class="form-control" id="trainFrequency" placeholder="Frequency"
+                                    required>
+                                <div class="invalid-tooltip">
+                                    Frequency. (min)
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <button class="btn btn-primary" type="submit" id="submitTrain">Submit Train</button>
+                    </form>
+
+
+                    <!-- FORM END -->
+                </div>
+            </div>
+        </section>
+        <!-- ADD TRAIN FORM END -->
+
+
+       
+        <!-- CUSTOM LINKS -->
+        <script src="assets/js/app.js"></script>
+        <!-- BOOTSTRAP LINKS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
